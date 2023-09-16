@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Javascript can change the style of an HTML element.</p>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='45px'">Click me</button>
+
+    <p id="demo1">Javascript can hide elements</p>
+    <button type="button" onclick="document.getElementById('demo1').style.display='none'">Click me</button>
+
+    <h2>Demo Javascript in body</h2>
+    <p id="demo2">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            document.getElementById("demo2").innerHTML = "Paragraph changed";
+        }
+    </script>
+
+    <h2>What can Javascript do?</h2>
+    <p>Javascript can change HTML attribute values.</p>
+    <button onclick="changeImage()">Turn on/off the light</button>
+    <img id="myImage" src="imageoff.jpeg" style="width:100px">
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("imageon")) {
+                image.src = "imageoff.jpeg";
+            } else {
+                image.src = "imageon.jpeg";
+            }
+        }
+    </script>
+</body>
+</html>
